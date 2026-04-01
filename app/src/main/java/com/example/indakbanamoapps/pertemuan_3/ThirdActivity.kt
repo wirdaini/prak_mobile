@@ -1,5 +1,6 @@
 package com.example.indakbanamoapps.pertemuan_3
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -43,7 +44,9 @@ class ThirdActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Persan berhasil dikirim ke = $nama", Toast.LENGTH_SHORT)
                 .show()
-        }
+
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            startActivity(intent)        }
     }
 
 
