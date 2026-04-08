@@ -35,8 +35,6 @@ class ThirdActivity : AppCompatActivity() {
 //        val editTextText: EditText = findViewById(R.id.editTextText)
 //        val button2: Button = findViewById(R.id.button2)
 
-
-
         binding.button2.setOnClickListener {
             //Mengambil value dari inputNama dan menampilkan di Logcat
             val nama = binding.editTextText.text
@@ -46,9 +44,8 @@ class ThirdActivity : AppCompatActivity() {
                 .show()
 
             val intent = Intent(this, ThirdResultActivity::class.java)
-            startActivity(intent)        }
+            startActivity(intent)
+        }
     }
-
-
 }
 
