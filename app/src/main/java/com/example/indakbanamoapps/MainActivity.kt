@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.indakbanamoapps.databinding.ActivityMainBinding
-import com.example.indakbanamoapps.pertemuan_4.FourthActivity
-import com.example.indakbanamoapps.pertemuan_7.SevenActivity
+import com.example.indakbanamoapps.Home.pertemuan_4.FourthActivity
+import com.example.indakbanamoapps.Home.pertemuan_7.SevenActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 

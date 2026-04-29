@@ -1,4 +1,4 @@
-package com.example.indakbanamoapps.pertemuan_4
+package com.example.indakbanamoapps.Home.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,10 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.indakbanamoapps.R
 import com.example.indakbanamoapps.databinding.ActivityFourthBinding
-import com.example.indakbanamoapps.databinding.ActivityMainBinding
-import com.example.indakbanamoapps.databinding.ActivityThirdBinding
-import com.example.indakbanamoapps.pertemuan_2.SecondActivity
-import com.example.indakbanamoapps.pertemuan_4.FourthActivity
+import com.example.indakbanamoapps.Home.pertemuan_2.SecondActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
