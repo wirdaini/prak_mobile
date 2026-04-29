@@ -1,4 +1,6 @@
 package com.example.indakbanamoapps.pertemuan_5
+
+
 import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebViewClient
@@ -10,10 +12,12 @@ import com.example.indakbanamoapps.databinding.ActivityWebViewBinding
 class WebViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWebViewBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         // Setup Toolbar
         setSupportActionBar(binding.toolbar)
@@ -23,11 +27,13 @@ class WebViewActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
+
         // Setup WebView
         binding.webView.apply {
             webViewClient = WebViewClient()
             settings.javaScriptEnabled = true
             loadUrl("https://merdeka.com")
+
 
             // Efek Toolbar sembunyi saat scroll
             setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
@@ -39,6 +45,8 @@ class WebViewActivity : AppCompatActivity() {
             }
         }
 
+
+        // SOLUSI BIAR GAK MERAH: Pakai OnBackPressedDispatcher (Cara Baru Google)
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 if (binding.webView.canGoBack()) {
@@ -64,3 +72,6 @@ class WebViewActivity : AppCompatActivity() {
         }
     }
 }
+
+
+

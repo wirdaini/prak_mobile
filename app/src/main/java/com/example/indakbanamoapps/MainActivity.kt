@@ -1,21 +1,21 @@
 package com.example.indakbanamoapps
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.indakbanamoapps.databinding.ActivityFourthBinding
 import com.example.indakbanamoapps.databinding.ActivityMainBinding
-import com.example.indakbanamoapps.databinding.ActivityThirdBinding
-import com.example.indakbanamoapps.pertemuan_3.ThirdResultActivity
 import com.example.indakbanamoapps.pertemuan_4.FourthActivity
+import com.example.indakbanamoapps.pertemuan_7.SevenActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,19 +24,50 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
+        // Navigasi ke Pertemuan 4
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("asal", "Rumbai")
             intent.putExtra("usia", 25)
             startActivity(intent)
-            finish()
+        }
+
+        // Navigasi ke Pertemuan 7
+        binding.btnToSeven.setOnClickListener {
+            val intent = Intent(this, SevenActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // Logika Logout
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        binding.btnLogout.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi Logout")
+                .setMessage("Apakah Anda yakin ingin logout?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+                    dialog.dismiss()
+                    Log.e("Logout", "User logout")
+
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
         }
     }
 }
+
