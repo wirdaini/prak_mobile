@@ -63,15 +63,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="44dp"
         android:text="Login"
         app:icon="@drawable/ic_login"
         app:iconGravity="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
-
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroupFilter"
@@ -111,9 +109,9 @@
         android:id="@+id/editTextText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
-        android:ems="10"
+        android:layout_marginTop="436dp"
         android:background="@drawable/edit_text_background"
+        android:ems="10"
         android:inputType="text"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,5 +119,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintVertical_bias="0.363"
+        app:useDefaultMargins="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 4"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 5"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 6"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+    </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
