@@ -1,6 +1,5 @@
 package com.example.indakbanamoapps
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +11,6 @@ import com.example.indakbanamoapps.databinding.ActivityMainBinding
 import com.example.indakbanamoapps.Home.pertemuan_4.FourthActivity
 import com.example.indakbanamoapps.Home.pertemuan_7.SevenActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -44,7 +42,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SevenActivity::class.java)
             startActivity(intent)
         }
-
 
         // Logika Logout
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)

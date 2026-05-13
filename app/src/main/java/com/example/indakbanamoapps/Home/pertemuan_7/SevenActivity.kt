@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.example.indakbanamoapps.R
 import com.example.indakbanamoapps.databinding.ActivitySevenBinding
 
-
 class SevenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySevenBinding
 
@@ -29,6 +28,7 @@ class SevenActivity : AppCompatActivity() {
             // Menggunakan icon back dari drawable
             setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
+
         // Menampilkan fragment pertama secara default
         replaceFragment(SatuFragment())
 
@@ -37,7 +37,6 @@ class SevenActivity : AppCompatActivity() {
         binding.btnFragment1.setOnClickListener {
             replaceFragment(SatuFragment())
         }
-
 
         binding.btnFragment2.setOnClickListener {
             replaceFragment(DuaFragment())
@@ -55,6 +54,7 @@ class SevenActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {

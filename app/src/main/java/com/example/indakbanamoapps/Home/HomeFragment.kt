@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.example.indakbanamoapps.AuthActivity
 import com.example.indakbanamoapps.Home.pertemuan_4.FourthActivity
 import com.example.indakbanamoapps.Home.pertemuan_7.SevenActivity
+import com.example.indakbanamoapps.Home.pertemuan_9.NinthActivity
 import com.example.indakbanamoapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -53,6 +54,11 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        // Navigasi ke Pertemuan 9
+        binding.btnToNine.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
 
         // Logika Logout
 

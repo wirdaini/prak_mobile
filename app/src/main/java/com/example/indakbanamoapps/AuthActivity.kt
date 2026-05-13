@@ -11,15 +11,11 @@ import com.example.indakbanamoapps.R
 import com.example.indakbanamoapps.databinding.ActivityAuthBinding
 import com.example.indakbanamoapps.MainActivity
 
-
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-
 
 class AuthActivity : AppCompatActivity() {
 
-
     private lateinit var binding: ActivityAuthBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
